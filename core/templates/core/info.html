@@ -13,6 +13,7 @@
 
 <body>
 <div class="container mt-5 w-50">
+  <h2>Post</h2>
   <form id="contactForm" method="POST">
     {% csrf_token %}
     {{ form|crispy }}
@@ -23,7 +24,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
       $(document).ready(function () {
-          // отслеживаем событие отправки формы
+
           $('#contactForm').submit(function () {
               // создаем AJAX-вызов
               $.ajax({
